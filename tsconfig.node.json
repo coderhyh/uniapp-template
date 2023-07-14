@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts", "./src/helper/autoImportType.ts", "./src/helper/piniaAutoRefs.ts", "./vitestConfig.ts"]
+}
