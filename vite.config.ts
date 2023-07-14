@@ -6,6 +6,7 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
 import AutoImportTypes from './src/helper/autoImportType'
+import AutoUpdatePages from './src/helper/autoUpdatePages'
 import PiniaAutoRefs from './src/helper/piniaAutoRefs'
 
 // https://vitejs.dev/config/
@@ -13,6 +14,7 @@ export default defineConfig({
   plugins: [
     AutoImportTypes({ dtsDir: 'src/types' }),
     PiniaAutoRefs(),
+    AutoUpdatePages(),
     AutoImport({
       imports: ['vue', 'pinia', 'uni-app'],
       dts: 'src/auto-imports.d.ts',
