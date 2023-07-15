@@ -115,6 +115,20 @@
     "uni_promisify": "readonly",
     "Request": "readonly",
     "getUserInfo": "readonly",
-    "request": "readonly"
+    "request": "readonly",
+    "isDevelopment": "readonly",
+    "isH5": "readonly",
+    "isMp": "readonly",
+    "isMp360": "readonly",
+    "isMpAlipay": "readonly",
+    "isMpBaidu": "readonly",
+    "isMpQq": "readonly",
+    "isMpToutiao": "readonly",
+    "isMpWeixin": "readonly",
+    "isProduction": "readonly",
+    "isQuickappWebview": "readonly",
+    "isQuickappWebviewHuawei": "readonly",
+    "isQuickappWebviewUnion": "readonly",
+    "platform": "readonly"
   }
 }

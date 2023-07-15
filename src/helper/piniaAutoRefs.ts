@@ -1,6 +1,7 @@
-import { promises as fs } from 'fs'
+import chokidar from 'chokidar'
+import { FSWatcher, promises as fs } from 'fs'
 import { resolve } from 'path'
-import { HmrContext } from 'vite'
+import { HmrContext, ResolvedConfig } from 'vite'
 
 type Options = Partial<{
   storeDir: string
@@ -61,13 +62,16 @@ export function useStore<T extends keyof typeof storeExports>(storeName: T) {
     fs.writeFile(outputFile, ctx, 'utf-8')
   }
 
-  generateConfigFiles()
+  const setupWatcher = (watcher: FSWatcher) => {
+    watcher.on('unlink', generateConfigFiles)
+    watcher.on('add', generateConfigFiles)
+  }
+
   return {
     name: 'pinia-auto-refs',
-    handleHotUpdate(ctx: HmrContext) {
-      if (ctx.file.includes(storeDir)) {
-        generateConfigFiles()
-      }
+    configResolved(config: ResolvedConfig) {
+      generateConfigFiles()
+      if (config.build.watch && config.command === 'build') setupWatcher(chokidar.watch(defaultOptions.storeDir))
     }
   }
 }

@@ -1,6 +1,7 @@
-import { promises as fs } from 'fs'
+import chokidar from 'chokidar'
+import { FSWatcher, promises as fs } from 'fs'
 import path, { resolve } from 'path'
-import { HmrContext } from 'vite'
+import { ResolvedConfig } from 'vite'
 
 type ESLintGlobalsPropValue = boolean | 'readonly' | 'readable' | 'writable' | 'writeable'
 
@@ -15,7 +16,7 @@ type Options = Partial<{
 }>
 
 const defaultOptions = {
-  dtsDir: 'src/@types',
+  dtsDir: 'src/types',
   filepath: '.eslintrc-auto-import-types.json',
   globalsPropValue: true
 }
@@ -42,14 +43,16 @@ export default function (options: Options = {}) {
     }
     fs.writeFile(filepath, JSON.stringify(eslintConfigs, null, 2), 'utf-8')
   }
+  const setupWatcher = (watcher: FSWatcher) => {
+    watcher.on('unlink', generateConfigFiles)
+    watcher.on('add', generateConfigFiles)
+  }
 
-  generateConfigFiles()
   return {
     name: 'auto-import-types',
-    handleHotUpdate(ctx: HmrContext) {
-      if (ctx.file.includes(dtsDir)) {
-        generateConfigFiles()
-      }
+    configResolved(config: ResolvedConfig) {
+      generateConfigFiles()
+      if (config.build.watch && config.command === 'build') setupWatcher(chokidar.watch(defaultOptions.dtsDir))
     }
   }
 }

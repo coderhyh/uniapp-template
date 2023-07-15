@@ -3,7 +3,10 @@
     {
       "path": "pages/index/index",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "index",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false,
+        "navigationBarBackgroundColor": "#fff"
       }
     }
   ],
@@ -11,6 +14,9 @@
     "navigationBarTextStyle": "black",
     "navigationBarTitleText": "uni-app",
     "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "usingComponents": {
+      "van-button": "wxcomponents/vant/button/index"
+    }
   }
 }

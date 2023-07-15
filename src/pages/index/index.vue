@@ -2,6 +2,7 @@
   <view class="content">
     index
     <Test />
+    <van-button type="primary">主要按钮</van-button>
   </view>
 </template>
 

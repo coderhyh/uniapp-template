@@ -12,7 +12,7 @@ import PiniaAutoRefs from './src/helper/piniaAutoRefs'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    AutoImportTypes({ dtsDir: 'src/types' }),
+    AutoImportTypes(),
     PiniaAutoRefs(),
     AutoUpdatePages(),
     AutoImport({
