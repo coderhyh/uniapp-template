@@ -18,7 +18,6 @@ export const autoUpdatePages = () => {
   }
   const setupWatcher = (watcher: fs.FSWatcher) => {
     watcher.on('unlink', (unlinkPath: string) => {
-      console.log(unlinkPath, path.extname(unlinkPath))
       if (path.extname(unlinkPath) !== '.vue') return
       const pagesJSON = getPagesJSON()
       const oldLength = pagesJSON.pages.length
@@ -31,7 +30,7 @@ export const autoUpdatePages = () => {
     name: 'auto-update-pages',
     configResolved(config: ResolvedConfig) {
       init()
-      if (config.build.watch && config.command === 'build') setupWatcher(chokidar.watch(pagePath))
+      setupWatcher(chokidar.watch(pagePath))
     }
   }
 }

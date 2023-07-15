@@ -52,7 +52,7 @@ export default function (options: Options = {}) {
     name: 'auto-import-types',
     configResolved(config: ResolvedConfig) {
       generateConfigFiles()
-      if (config.build.watch && config.command === 'build') setupWatcher(chokidar.watch(defaultOptions.dtsDir))
+      setupWatcher(chokidar.watch(defaultOptions.dtsDir))
     }
   }
 }
