@@ -122,8 +122,8 @@ devDependencies:
     specifier: ^9.6.0
     version: 9.6.0(eslint@8.25.0)
   hyh-toolkit:
-    specifier: ^0.1.3
-    version: 0.1.3
+    specifier: ^0.1.4
+    version: 0.1.4
   postcss:
     specifier: ^8.4.21
     version: 8.4.21
@@ -5872,8 +5872,8 @@ packages:
     engines: {node: '>=10.17.0'}
     dev: true
 
-  /hyh-toolkit@0.1.3:
-    resolution: {integrity: sha512-uL5FzEUrVxIPsny1lWLMbmcsDhHh2Z1WHn4bh0JDZMmb5bBIhnPEhqhO4+BjSgPhQ327Rn3Si4ZbxxjfOW+b7w==}
+  /hyh-toolkit@0.1.4:
+    resolution: {integrity: sha512-QBtNTUAeP02UOoIx+4CiAZA/pN4r39AerL96ntWdxFb1+GQn/XXyem0XCdebBO4P2o3Vj2G7t95ROFzpJGMrNQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       chokidar: 3.5.3
