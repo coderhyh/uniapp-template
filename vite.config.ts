@@ -1,13 +1,11 @@
 import uni from '@dcloudio/vite-plugin-uni'
-import { HyhToolkitResolvers } from 'hyh-toolkit/resolvers'
-import { AutoImportType, AutoUpdatePages, PiniaAutoRefs } from 'hyh-toolkit/vite-plugin'
+import { AutoImportType, AutoUpdatePages, HyhToolkitResolvers, PiniaAutoRefs } from 'hyh-toolkit/lib/vite'
 import { resolve } from 'path'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     AutoImportType(),
