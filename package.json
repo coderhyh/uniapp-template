@@ -55,9 +55,9 @@
     "@vue/runtime-core": "3.2.47",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.9",
+    "hyh-toolkit": "^0.3.3",
     "pinia": "2.0.33",
     "pinia-plugin-persistedstate": "^3.1.0",
-    "hyh-toolkit": "^0.3.0",
     "vue": "3.2.47"
   },
   "devDependencies": {
