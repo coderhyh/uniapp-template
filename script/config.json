@@ -1,0 +1,66 @@
+[
+  {
+    "name": "微信小程序",
+    "value": "mp-weixin"
+  },
+  {
+    "name": "支付宝小程序",
+    "value": "mp-alipay"
+  },
+  {
+    "name": "百度小程序",
+    "value": "mp-baidu"
+  },
+  {
+    "name": "京东小程序",
+    "value": "mp-jd"
+  },
+  {
+    "name": "快手小程序",
+    "value": "mp-kuaishou"
+  },
+  {
+    "name": "钉钉小程序",
+    "value": "mp-lark"
+  },
+  {
+    "name": "QQ 小程序",
+    "value": "mp-qq"
+  },
+  {
+    "name": "今日头条小程序",
+    "value": "mp-toutiao"
+  },
+  {
+    "name": "App",
+    "value": "app"
+  },
+  {
+    "name": "App Android",
+    "value": "app-android"
+  },
+  {
+    "name": "App iOS",
+    "value": "app-ios"
+  },
+  {
+    "name": "H5",
+    "value": "h5"
+  },
+  {
+    "name": "H5 SSR",
+    "value": "h5:ssr"
+  },
+  {
+    "name": "快应用 Webview",
+    "value": "quickapp-webview"
+  },
+  {
+    "name": "快应用 Webview 华为",
+    "value": "quickapp-webview-huawei"
+  },
+  {
+    "name": "快应用 Webview 联盟",
+    "value": "quickapp-webview-union"
+  }
+]

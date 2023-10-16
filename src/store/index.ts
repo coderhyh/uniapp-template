@@ -1,7 +1,5 @@
 import { createPersistedState } from 'pinia-plugin-persistedstate'
 
-import { decryptData, encryptData } from '~/utils'
-
 const store = createPinia()
 
 const isDev = import.meta.env.DEV

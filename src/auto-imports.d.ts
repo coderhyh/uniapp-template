@@ -6,7 +6,7 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const Request: typeof import('./network/request/index')['Request']
+  const Request: typeof import('./utils/request')['Request']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
@@ -21,7 +21,7 @@ declare global {
   const getActivePinia: typeof import('pinia')['getActivePinia']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
-  const getUserInfo: typeof import('./network/api/menu')['getUserInfo']
+  const getUserInfo: typeof import('./api/menu')['getUserInfo']
   const h: typeof import('vue')['h']
   const hideLoading: typeof import('./utils/service-loading')['hideLoading']
   const hyh_authorize: typeof import('./utils/uni-utils-async')['hyh_authorize']
@@ -98,7 +98,7 @@ declare global {
   const reactive: typeof import('vue')['reactive']
   const readonly: typeof import('vue')['readonly']
   const ref: typeof import('vue')['ref']
-  const request: typeof import('./network/request/index')['request']
+  const request: typeof import('./utils/request')['request']
   const resolveComponent: typeof import('vue')['resolveComponent']
   const setActivePinia: typeof import('pinia')['setActivePinia']
   const setMapStoreSuffix: typeof import('pinia')['setMapStoreSuffix']

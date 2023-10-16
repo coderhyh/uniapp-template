@@ -1,7 +1,7 @@
 <template>
   <view class="content">
     index
-    <Test />
+    <Cpn />
     <van-button type="primary">主要按钮</van-button>
   </view>
 </template>

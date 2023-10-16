@@ -1,7 +1,8 @@
 import uni from '@dcloudio/vite-plugin-uni'
-import { AutoImportType, AutoUpdatePages, HyhToolkitResolvers, PiniaAutoRefs } from 'hyh-toolkit/lib/vite'
+import { AutoImportType, AutoUpdatePages, PiniaAutoRefs } from 'hyh-toolkit/lib/vite'
 import { resolve } from 'path'
 import Unocss from 'unocss/vite'
+import AutoExport from 'unplugin-auto-export/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
@@ -11,11 +12,13 @@ export default defineConfig({
     AutoImportType(),
     PiniaAutoRefs(),
     AutoUpdatePages(),
+    AutoExport({
+      path: ['~/pages/**/{cpns,hooks,config}/*']
+    }),
     AutoImport({
       imports: ['vue', 'pinia', 'uni-app'],
       dts: 'src/auto-imports.d.ts',
-      dirs: ['src/hooks', 'src/utils', 'src/network'],
-      resolvers: [HyhToolkitResolvers()],
+      dirs: ['src/hooks', 'src/utils', 'src/api'],
       eslintrc: {
         enabled: true,
         filepath: './.eslintrc-auto-import.json',
@@ -25,8 +28,7 @@ export default defineConfig({
     Components({
       dts: 'src/components.d.ts',
       dirs: ['src/components'],
-      extensions: ['vue'],
-      types: []
+      extensions: ['vue']
     }),
     Unocss(),
     uni()

@@ -1,5 +1,3 @@
-import { request } from '../request'
-
 interface IFoo {
   <T>(...args: any[]): Promise<T>
   abort?: () => void
