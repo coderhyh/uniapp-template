@@ -15,7 +15,7 @@
     "paths": {
       "~/*": ["src/*"]
     },
-    "types": ["vite/client"],
+    "types": ["vite/client", "@dcloudio/types", "@ttou/uview-typings/v3", "@ttou/uview-typings/refs"],
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
   "references": [{ "path": "./tsconfig.node.json" }],
