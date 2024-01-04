@@ -1,4 +1,4 @@
-{
+module.exports = {
   "useTabs": false,
   "tabWidth": 2,
   "printWidth": 120,
@@ -13,5 +13,6 @@
       }
     }
   ],
-  "arrowParens": "always"
+  "arrowParens": "always",
+  "endOfLine": "lf"
 }

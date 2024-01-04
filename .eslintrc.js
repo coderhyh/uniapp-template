@@ -1,23 +1,26 @@
 module.exports = {
   root: true,
   env: {
+    browser: true,
+    es2023: true,
     node: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
     'eslint:recommended',
-    '@vue/typescript/recommended',
-    '@vue/prettier',
-    '@vue/prettier/@typescript-eslint',
+    'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    '@vue/typescript/recommended',
+    '@vue/prettier',
+    '@vue/eslint-config-prettier',
+    '@vue/eslint-config-typescript',
     '.eslintrc-auto-import.json',
     '.eslintrc-auto-import-types.json'
   ],
   parser: 'vue-eslint-parser',
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 2023,
     parser: '@typescript-eslint/parser',
     sourceType: 'module',
     ecmaFeatures: {
@@ -26,10 +29,7 @@ module.exports = {
   },
   // eslint-plugin-vue @typescript-eslint/eslint-plugin eslint-plugin-prettier的缩写
   plugins: ['vue', '@typescript-eslint', 'prettier', 'import', 'simple-import-sort'],
-  globals: {
-    uni: true,
-    wx: true
-  },
+
   rules: {
     complexity: ['error', 10],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -59,7 +59,7 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-var': 'error',
-    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn',
     // 禁止出现console
     // "no-console": "warn",
     // 禁用debugger
