@@ -13,7 +13,8 @@ export default defineConfig({
     PiniaAutoRefs(),
     AutoUpdatePages(),
     AutoExport({
-      path: ['~/pages/**/{cpns,hooks,config}/*']
+      path: ['~/pages/**/{cpns,hooks,config}/*'],
+      componentDirs: ['cpns']
     }),
     AutoImport({
       imports: ['vue', 'pinia', 'uni-app'],
